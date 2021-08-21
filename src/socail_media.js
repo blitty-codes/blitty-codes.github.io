@@ -42,4 +42,4 @@ const SocialMedias = {
 	}
 };
 
-Vue.createApp(SocialMedias).mount('#app')
+Vue.createApp(SocialMedias).mount('#social')
