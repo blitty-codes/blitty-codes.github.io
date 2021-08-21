@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'Rounded Mplus 1c';
+  src: url('../fonts/MPLUSRounded1c-Medium.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+@font-face {
+	font-family: 'Comfortaa';
+	src: url('../fonts/Comfortaa-VariableFont_wght.ttf') format('truetype');
+}
+
+.aside_text {
+	font-family: "Rounded Mplus 1c";
+	font-style: normal;
+	font-weight: normal;
+
+	color: #4F4F4F;
+}
+
+.name {
+	text-align: center;
+	font-size: 64px;
+	line-height: 95px;
+
+	margin-bottom: 35px;
+	margin-top: 25px;
+}
+
+.social_links {
+	font-size: 24px;
+	line-height: 35px;
+
+	padding-left: 15px;
+}
+
+.title_section, .text_section {	
+	font-family: "Comfortaa";
+	font-style: normal;
+	font-weight: normal;
+
+	color: #000000;
+}
+
+.title_section {
+	width: 222px;
+	height: 54px;
+
+	text-align: center;
+
+	font-size: 48px;
+	line-height: 54px;
+}
+
+.text_section {
+	width: 682px;
+	height: 633px;
+
+	font-size: 24px;
+	line-height: 27px;
+}
+
+.list {
+	list-style: none;
+}
+
+.list_done li::before {
+	content: "✅ ";
+}
+
+.list_undone li::before {
+	content: "⏰ ";
+}
