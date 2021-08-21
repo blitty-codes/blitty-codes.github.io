@@ -1,16 +1,13 @@
-@font-face {
-  font-family: 'Rounded Mplus 1c';
-  src: url('../fonts/MPLUSRounded1c-Medium.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
-}  
-
 body {
 	background: #3A3A3A;
 }
 
-.nav {
+.aside {
 	position: sticky;
-	width: 30%;
-	height: auto;
+	width: max-content;
+	height: unset;
+
+	top: auto;
 
 	background: #D7D7D7;
 }
@@ -34,34 +31,10 @@ body {
 	width: auto;
 }
 
-.nav_text {
-	font-family: "Rounded Mplus 1c";
-	font-style: normal;
-	font-weight: normal;
-
-	color: #4F4F4F;
-}
-
-.name {
-	text-align: center;
-	font-size: 64px;
-	line-height: 95px;
-
-	margin-bottom: 35px;
-	margin-top: 25px;
-}
-
 .social_media {
 	display: block;
 	margin: auto;
 	width: min-content;
-}
-
-.social_links {
-	font-size: 24px;
-	line-height: 35px;
-
-	padding-left: 15px;
 }
 
 .contact {
@@ -70,54 +43,105 @@ body {
 	padding-bottom: 12px;
 }
 
-/* loader */
-.loader_container {
-	padding-bottom: 50px;
+/* svgs */
+/* source -> https://www.shapedivider.app/ */
+.arrow {
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+
+	fill: #d7d7d7;
+
+	background-color: #40cff2;
 }
 
-.loading_text {
-	font-size: 2.5rem;
-	margin: auto;
-	margin-bottom: 5px;
-	text-align: center;font-size: 50px;
+.wave {
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+	transform: rotate(180deg);
+
+	background-color: #00ffab;
 }
 
-.loader {
-	width: 300px;
-
-	margin: auto;
-
-	border-color: #3a3a3a;
-	border-width: 16px;
-	border-style: solid;
-}
-
-.loader::after {
+.wave svg {
 	position: relative;
 	display: block;
-
-	content: " ";
-	width: 50px;
-	height: 10px;
-	background-color: orangered;
-
-	animation: walk 3s infinite;
+	width: calc(125% + 1.3px);
+	height: 162px;
 }
 
-@keyframes walk {
-	0% {
-		left: 0;
-	}
-	50% {
-		left: 250px;
-	}
-	100% {
-		left: 0;
-	}
+.wave .shape-fill {
+	fill: #40CFF2;
 }
 
-@media (max-width: 800px) {
-  .nav {
+.book {
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+	transform: rotate(180deg);
+	background-color: honeydew;
+}
+
+.book svg {
+	position: relative;
+	display: block;
+	width: calc(100% + 1.3px);
+	height: 110px;
+}
+
+.book .shape-fill {
+	fill: #00FFAB;
+}
+
+/**/
+.section {
+	position: relative;
+	
+	display: flex;
+	flex-direction: column;
+	
+	align-items: center;
+}
+
+.cyan {
+	background-color: #40cff2;
+}
+
+.green_blue {
+	background-color: #00ffab;
+}
+
+.honeydew {
+	background-color: honeydew;
+}
+
+.container_about {
+	margin: 0 20px;
+}
+
+.container-dev-card {
+	margin-bottom: 20px;
+}
+
+.dev-card, .projects-custom {
+	width: 80%;
+}
+
+.dev-card {
+	border-radius: 20px 20px 10px 10px;
+	border-style: dashed;
+	box-shadow: 0px 0px 20px 5px beige;
+	margin-bottom: 20px;
+}
+
+.projects-custom {
+	border-radius: 0;
+	margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  .aside {
 		width: auto;
 	}
 }
