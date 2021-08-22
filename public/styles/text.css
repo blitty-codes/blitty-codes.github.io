@@ -33,7 +33,8 @@
 }
 
 .title_section,
-.text_section {
+.text_section,
+.skills p {
 	font-family: 'Comfortaa';
 	font-style: normal;
 	font-weight: normal;
