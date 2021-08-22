@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Rounded Mplus 1c';
-  src: url('../fonts/MPLUSRounded1c-Medium.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+	font-family: 'Rounded Mplus 1c';
+	src: url('../fonts/MPLUSRounded1c-Medium.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
 
 @font-face {
@@ -9,11 +9,11 @@
 }
 
 .aside_text {
-	font-family: "Rounded Mplus 1c";
+	font-family: 'Rounded Mplus 1c';
 	font-style: normal;
 	font-weight: normal;
 
-	color: #4F4F4F;
+	color: #4f4f4f;
 }
 
 .name {
@@ -21,8 +21,8 @@
 	font-size: 64px;
 	line-height: 95px;
 
-	margin-bottom: 35px;
-	margin-top: 25px;
+	margin-bottom: 5px;
+	margin-top: 15px;
 }
 
 .social_links {
@@ -32,8 +32,9 @@
 	padding-left: 15px;
 }
 
-.title_section, .text_section {	
-	font-family: "Comfortaa";
+.title_section,
+.text_section {
+	font-family: 'Comfortaa';
 	font-style: normal;
 	font-weight: normal;
 
@@ -41,7 +42,7 @@
 }
 
 .title_section {
-	width: 222px;
+	width: auto;
 	height: 54px;
 
 	text-align: center;
@@ -63,9 +64,9 @@
 }
 
 .list_done li::before {
-	content: "✅ ";
+	content: '✅ ';
 }
 
 .list_undone li::before {
-	content: "⏰ ";
+	content: '⏰ ';
 }

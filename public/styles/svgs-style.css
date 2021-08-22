@@ -1,0 +1,75 @@
+/* svgs */
+/* source -> https://www.shapedivider.app/ */
+.arrow {
+	display: none;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+
+	fill: #d7d7d7;
+
+	background-color: #40cff2;
+}
+
+.wave {
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+	transform: rotate(180deg);
+
+	background-color: #00ffab;
+}
+
+.wave svg {
+	position: relative;
+	display: block;
+	width: calc(125% + 1.3px);
+	height: 162px;
+}
+
+.wave .shape-fill {
+	fill: #40cff2;
+}
+
+.book {
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+	transform: rotate(180deg);
+	background-color: honeydew;
+}
+
+.book svg {
+	position: relative;
+	display: block;
+	width: calc(100% + 1.3px);
+	height: 110px;
+}
+
+.book .shape-fill {
+	fill: #00ffab;
+}
+
+.multy-waves {
+	background-color: #ffcc95;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+}
+
+.multy-waves svg {
+	position: relative;
+	display: block;
+	width: calc(100% + 1.3px);
+	height: 70px;
+}
+
+.multy-waves .shape-fill {
+	fill: #f0fff0;
+}
+
+@media (max-width: 1000px) {
+	.arrow {
+		display: block;
+	}
+}

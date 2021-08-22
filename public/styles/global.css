@@ -1,24 +1,36 @@
 body {
-	background: #3A3A3A;
+	background: #3a3a3a;
+	margin: 0;
+}
+
+main {
+	width: calc(100% - 500px);
+	float: right;
 }
 
 .aside {
-	position: sticky;
-	width: max-content;
-	height: unset;
+	position: fixed;
+	width: 500px;
+	height: 100vh;
+	padding-bottom: 5px;
 
 	top: auto;
 
-	background: #D7D7D7;
+	background: #d7d7d7;
 }
 
 .img_container {
-	padding-top: 50px;
+	padding-top: 20px;
 }
 
 .img {
-	display: block;
 	width: 50%;
+}
+
+.img,
+.dev-card,
+.projects-custom {
+	display: block;
 
 	margin: auto;
 
@@ -40,67 +52,16 @@ body {
 .contact {
 	display: flex;
 
-	padding-bottom: 12px;
-}
-
-/* svgs */
-/* source -> https://www.shapedivider.app/ */
-.arrow {
-	width: 100%;
-	overflow: hidden;
-	line-height: 0;
-
-	fill: #d7d7d7;
-
-	background-color: #40cff2;
-}
-
-.wave {
-	width: 100%;
-	overflow: hidden;
-	line-height: 0;
-	transform: rotate(180deg);
-
-	background-color: #00ffab;
-}
-
-.wave svg {
-	position: relative;
-	display: block;
-	width: calc(125% + 1.3px);
-	height: 162px;
-}
-
-.wave .shape-fill {
-	fill: #40CFF2;
-}
-
-.book {
-	width: 100%;
-	overflow: hidden;
-	line-height: 0;
-	transform: rotate(180deg);
-	background-color: honeydew;
-}
-
-.book svg {
-	position: relative;
-	display: block;
-	width: calc(100% + 1.3px);
-	height: 110px;
-}
-
-.book .shape-fill {
-	fill: #00FFAB;
+	padding-bottom: 10px;
 }
 
 /**/
 .section {
 	position: relative;
-	
+
 	display: flex;
 	flex-direction: column;
-	
+
 	align-items: center;
 }
 
@@ -116,7 +77,12 @@ body {
 	background-color: honeydew;
 }
 
+.salmon {
+	background-color: #ffcc95;
+}
+
 .container_about {
+	width: 80%;
 	margin: 0 20px;
 }
 
@@ -124,7 +90,8 @@ body {
 	margin-bottom: 20px;
 }
 
-.dev-card, .projects-custom {
+.dev-card,
+.projects-custom {
 	width: 80%;
 }
 
@@ -140,8 +107,124 @@ body {
 	margin-bottom: 20px;
 }
 
-@media (max-width: 600px) {
-  .aside {
+/* skills */
+.cover-grid {
+	width: 40vw;
+
+	padding: 10px;
+}
+
+.skill_parent {
+	width: 70vw;
+	margin: auto;
+	display: block;
+	padding-bottom: 30px;
+}
+
+.skill_container {
+	background-color: #ddd;
+	margin-left: 10px;
+	right: 50px;
+	width: 80%;
+	margin-bottom: 20px;
+}
+
+.skills {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: white;
+}
+
+.skills p {
+	display: block;
+	margin: 0;
+	color: #252525;
+}
+
+.percentaje {
+	padding-right: 10px;
+	text-align: right;
+}
+
+.text-percentaje {
+	position: absolute;
+	padding-left: 10px;
+
+	text-align: left;
+}
+
+.html {
+	width: 90%;
+	background-color: #04aa6d;
+}
+.css {
+	width: 78%;
+	background-color: #2196f3;
+}
+.js {
+	width: 80%;
+	background-color: #f44336;
+}
+.ts {
+	width: 40%;
+	background-color: #8048fd;
+}
+.cpp {
+	width: 63%;
+	background-color: #b989ff;
+}
+.c {
+	width: 70%;
+	background-color: #e27ce0;
+}
+.python {
+	width: 40%;
+	background-color: gold;
+}
+.react {
+	width: 68%;
+	background-color: #36e7f4;
+}
+
+.paragraph_section {
+	width: auto !important;
+	height: auto !important;
+	padding: 10px;
+	padding-top: auto;
+	text-align: center;
+}
+
+.footer {
+	color: #d7d7d7;
+	text-align: center;
+	font-size: 20px;
+}
+
+@media (max-width: 1000px) {
+	main {
+		width: auto;
+		height: auto;
+		float: unset;
+	}
+	.aside {
+		position: sticky;
+		width: auto;
+		padding-bottom: 50px;
+	}
+	.img {
+		width: 30%;
+	}
+	.container_about {
+		margin: auto;
+		width: 60%;
+	}
+	.skill_container {
+		width: 80vw;
+	}
+	.skill_parent {
+		width: auto;
+	}
+	.cover-grid {
 		width: auto;
 	}
 }
