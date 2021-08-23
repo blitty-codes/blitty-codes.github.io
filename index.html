@@ -27,6 +27,11 @@
 
 	<body>
 		<div id="app">
+			<select name="lang" class="lang-selector" @click="changeLang">
+				<option value="es">Español</option>
+				<option value="en">English</option>
+			</select>
+			<a href="#app">🔝</a>
 			<aside class="aside">
 				<!-- Profile image and nick -->
 				<div class="container">
@@ -78,39 +83,12 @@
 			<!-- information Blitty -->
 			<main>
 				<!-- About section -->
-				<section class="section cyan" name="Sobre mi">
+				<section class="section cyan" name="About me">
 					<h1 class="title_section">
-						<u>Sobre mi</u>
+						<u>{{ idiom.info.about }}</u>
 					</h1>
 					<div class="container_about">
-						<span class="text_section">
-							<b>48 65 6c 6c 6f 21 21</b>
-							<br /><br />
-							I <b>love</b> programming, you can call me <b>B</b> or
-							<b>Blitty</b>. <br /><br />
-							Things I do (in tech):
-							<ul class="list list_done">
-								<li>Web development</li>
-								<li>Competitive Programming</li>
-								<li>AI, ML (a little knowledge)</li>
-								<li>Product Ideas</li>
-								<li>Learn new technology</li>
-								<li>Googling</li>
-							</ul>
-							<br />
-							Things I <i>want</i> to do (in tech):
-							<ul class="list list_undone">
-								<li>IoT</li>
-								<li>DL</li>
-								<li>Open Source Contribution</li>
-								<li>Ethical Hacking</li>
-								<li>Blockchain</li>
-							</ul>
-							That is just a small entry, but I wish I find people to start
-							learning or creating new innovative things, which I love to do.
-							<br /><br />
-							<u>Q29udGFjdCBtZSEh ;)</u>
-						</span>
+						<span class="text_section" v-html="idiom.info.aboutInfo"></span>
 					</div>
 				</section>
 
@@ -131,7 +109,7 @@
 
 				<section class="section green_blue" name="Blogs">
 					<h1 class="title_section">
-						<u>Blogs</u>
+						<u>{{ idiom.info.blogs }}</u>
 					</h1>
 					<div class="container-dev-card">
 						<a href="https://dev.to/blitty" target="_blanck">
@@ -160,9 +138,9 @@
 					</svg>
 				</div>
 
-				<section class="section honeydew" name="projects" id="projects">
+				<section class="section honeydew" name="projects">
 					<h1 class="title_section">
-						<u>Proyectos</u>
+						<u>{{ idiom.info.projects }}</u>
 					</h1>
 
 					<!-- loader -->
@@ -171,7 +149,7 @@
 						<div class="loader"></div>
 					</div>
 
-					<div class="projects-container">
+					<div class="projects-container" id="projects">
 						<div class="project" v-for="p in projects_info" :key="p.id">
 							<!-- generated with mugshotbot -->
 							<a :href="p.link" target="_blank">
@@ -179,10 +157,10 @@
 							</a>
 						</div>
 					</div>
-					<p class="text_section paragraph_section">
-						And much more!!! Go to my
-						<a href="https://github.com/blitty-codes">GH profile</a>
-					</p>
+					<p
+						class="text_section paragraph_section"
+						v-html="idiom.info.projectMore"
+					></p>
 				</section>
 
 				<!-- Multy waves -->
@@ -210,37 +188,45 @@
 					</svg>
 				</div>
 
-				<section class="section salmon" id="skills" name="Skills">
-					<h1 class="title_section"><u>Skills</u></h1>
-					<div class="">
-						<!-- loader -->
-						<div v-if="loading" class="loader_container">
-							<p class="aside_text loading_text">Loading...</p>
-							<div class="loader"></div>
-						</div>
+				<section class="section salmon" name="Skills">
+					<h1 class="title_section"><u>{{ idiom.info.skills }}</u></h1>
+					<!-- loader -->
+					<div v-if="loading" class="loader_container">
+						<p class="aside_text loading_text">Loading...</p>
+						<div class="loader"></div>
+					</div>
 
-						<div class="skills_container">
-							<div class="cover-grid" v-for="skill in skills" :id="skill.id">
-								<div class="skill_container">
-									<div :class="skill.css" class="skills">
-										<p class="text-percentaje">{{ skill.text }}</p>
-										<p class="percentaje">{{ skill.percentaje }}</p>
-									</div>
-								</div>
-							</div>
+					<div class="skills_container" id="skills">
+						<div
+							class="flag"
+							v-for="tSkill in tech_skills"
+							:id="tSkill.id"
+							:class="tSkill.css"
+						>
+							<p class="text-skill">{{ tSkill.text }}</p>
+						</div>
+					</div>
+
+					<hr style="width: 60vw; margin-top: 20px; margin-bottom: 20px" />
+
+					<div class="skills_container">
+						<div
+							class="rectangle"
+							v-for="skill in idiom.info.skillsCharac"
+							:key="skill"
+						>
+							<p class="text-skill">{{ skill }}</p>
 						</div>
 					</div>
 
 					<div class="idioms">
 						<h3 class="title_section" style="margin-bottom: 0">
-							<u>Idiomas</u>
+							<u>{{ idiom.info.idioms }}</u>
 						</h3>
-						<div class="text_section paragraph_section">
-							<p>🇪🇸 Español - Nativo</p>
-							<p>🇬🇧 Ingles - Fluido</p>
-							<p>🇩🇪 Aleman - Iniciado</p>
-							<p>Esperanto - Iniciado</p>
-						</div>
+						<div
+							class="text_section paragraph_section"
+							v-html="idiom.info.idiomsText"
+						></div>
 					</div>
 				</section>
 				<footer class="footer">
@@ -259,5 +245,6 @@
 		<script src="./src/socail_media.js"></script>
 		<script src="./src/projects.js"></script>
 		<script src="./src/skills.js"></script>
+		<script type="module" src="./src/app.js"></script>
 	</body>
 </html>
