@@ -1,3 +1,7 @@
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background: #3a3a3a;
 	margin: 0;
@@ -6,6 +10,30 @@ body {
 main {
 	width: calc(100% - 500px);
 	float: right;
+}
+
+.lang-selector {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	z-index: 99;
+	border-radius: 20px;
+	border-style: ridge;
+	padding: 5px;
+	font-size: 18px;
+}
+
+.scroll-top {
+	position: fixed;
+	bottom: 10px;
+	right: 20px;
+	z-index: 99;
+	font-size: 40px;
+	text-decoration: unset;
+	background-color: white;
+	padding: 10px 15px;
+	border-radius: 10px;
+	box-shadow: blanchedalmond;
 }
 
 .aside {
@@ -108,25 +136,13 @@ main {
 }
 
 /* skills */
-.cover-grid {
-	width: 40vw;
-
-	padding: 10px;
-}
-
-.skill_parent {
-	width: 70vw;
-	margin: auto;
-	display: block;
-	padding-bottom: 30px;
-}
-
-.skill_container {
-	background-color: #ddd;
-	margin-left: 10px;
-	right: 50px;
-	width: 80%;
-	margin-bottom: 20px;
+.skills_container {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	overflow: hidden;
+	align-items: center;
+	justify-content: center;
 }
 
 .skills {
@@ -135,10 +151,45 @@ main {
 	color: white;
 }
 
-.skills p {
-	display: block;
-	margin: 0;
-	font-weight: bolder !important;
+.flag {
+	position: relative;
+
+	box-sizing: content-box;
+
+	width: 70px;
+	height: 56px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	padding-top: 15px;
+
+	background: red;
+	text-align: center;
+
+	border-top-style: groove;
+	border-left-style: double;
+	border-right-style: double;
+}
+
+.flag:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 0;
+	height: 0;
+	border-bottom: 10px solid #ffcc95;
+	border-left: 35px solid transparent;
+	border-right: 35px solid transparent;
+}
+
+.rectangle {
+	width: auto;
+	background-color: aliceblue;
+	margin: 5px;
+	padding: 5px;
+	border-color: #2b2722;
+	border-width: medium;
+	border-style: groove;
 }
 
 .percentaje {
@@ -146,43 +197,28 @@ main {
 	text-align: right;
 }
 
-.text-percentaje {
-	position: absolute;
-	padding-left: 10px;
-
-	text-align: left;
-}
-
 .html {
-	width: 90%;
 	background-color: #04aa6d;
 }
 .css {
-	width: 78%;
 	background-color: #2196f3;
 }
 .js {
-	width: 80%;
 	background-color: #f44336;
 }
 .ts {
-	width: 40%;
 	background-color: #8048fd;
 }
 .cpp {
-	width: 63%;
 	background-color: #b989ff;
 }
 .c {
-	width: 70%;
 	background-color: #e27ce0;
 }
 .python {
-	width: 40%;
 	background-color: gold;
 }
 .react {
-	width: 68%;
 	background-color: #36e7f4;
 }
 

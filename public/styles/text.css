@@ -33,13 +33,23 @@
 }
 
 .title_section,
-.text_section,
-.skills p {
-	font-family: 'Comfortaa';
+.text_section {
 	font-style: normal;
 	font-weight: normal;
+}
 
+.title_section,
+.text_section,
+.text-skill,
+.lang-selector {
+	font-family: 'Comfortaa';
 	color: #000000;
+}
+
+.text-skill {
+	font-size: medium;
+	font-weight: bolder;
+	margin: 0;
 }
 
 .title_section {
@@ -64,10 +74,10 @@
 	list-style: none;
 }
 
-.list_done li::before {
+.list_done li::marker {
 	content: '✅ ';
 }
 
-.list_undone li::before {
+.list_undone li::marker {
 	content: '⏰ ';
 }
