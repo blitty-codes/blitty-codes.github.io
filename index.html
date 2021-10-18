@@ -1,90 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="dev_m&b.png" type="image/png">
+    <link rel="stylesheet" href="./styles.css" />
+    <title>B & M</title>
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/png" href="dev_m&b.png">
-	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="./styles.css">
-	<title>B & M</title>
-</head>
+  <body>
+    <div class="h-screen flex flex-col justify-center bg-white">
+      <div class="my-auto">
+        <h1 class="head title-custom text-center text-6xl">B & M</h1>
+        <div class="flex justify-center gap-10">
+          <a
+            href="#blitty"
+            class="heartbeat bg-green-900 text-white rounded-xl p-2 text-2xl"
+            >Blitty</a
+          >
+          <a
+            href="#merk"
+            class="heartbeat bg-green-900 text-white rounded-xl p-2 text-2xl"
+            >Merk</a
+          >
+        </div>
+      </div>
+    </div>
 
-<body>
-	<header class="header">
-		<h1 class="head">B & M</h1>
-		<div class="w-fit m-auto super-a">
-			<a href="#blitty" class="green-color underline text-4xl mr-8em">Blitty</a>
-			<a href="#merk" class="green-color underline text-4xl ml-4em">Merk</a>
-		</div>
-	</header>
+    <div class="md:flex md:justify-center">
+      <div id="blitty" class="p-8 bg-white">
+        <div class="max-w-sm rounded shadow-lg h-full">
+          <img class="w-full" src="blitty_icono.jpg" alt="Blitty logo" />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">David García</div>
+            <div class="text-l m-0"><i>Blitty</i></div>
+            <p class="text-gray-700 text-base">
+              Estudiante de la <u>ETSISI</u> en la carrera
+              <b>Ingeniería del Software</b> y apasionado por la
+              <b>Innovación</b>, la <b>Inteligencia Artificial</b> y
+              <b>Seguridad</b>. Interesado en proyectos relacionados con las
+              <u>nuevas tecnologías</u> y en los que se aprende a la vez que se
+              desarrolla.
+            </p>
+            <br />
+            <img class="w-4/6 m-auto" src="blitty_qr.png" alt="Blitty CV" />
+            <div class="w-fit m-auto">
+              <a href="https://qrco.de/bcT5EW" class="flex justify-center p-4">
+                <button
+                  class="
+                    bg-green-500
+                    hover:bg-green-700
+                    text-white
+                    font-bold
+                    py-2
+                    px-4
+                    rounded
+                    content-center
+                  "
+                >
+                  Curriculum Vitae
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
 
-	<div class="custom-shape-divider-top-1634168111">
-		<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-			<path d="M1200,0H0V120H281.94C572.9,116.24,602.45,3.86,602.45,3.86h0S632,116.24,923,120h277Z"
-				class="shape-fill"></path>
-		</svg>
-	</div>
+      <div id="merk" class="p-8 bg-white">
+        <div class="max-w-sm rounded shadow-lg h-full">
+          <img class="w-full" src="merk_icono.jpg" alt="Marcos" />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Marcos González</div>
+            <div class="text-l m-0"><i>Merk</i></div>
+            <p class="text-gray-700 text-base">
+              Estudiante de <b>Ingeniería de Software</b> en la <u>ETSISI</u> y
+              apasionado por la <b>Ciberseguridad</b>. Motivado para aprender
+              nuevas tecnologías y muy interesado en la
+              <u>Ingeniería Inversa</u> y el
+              <u>Desarrollo de Malware y Exploits</u>.
+            </p>
+            <br />
+            <img class="w-4/6 m-auto" src="qr_merk.png" alt="Marcos CV" />
+            <div class="w-fit m-auto">
+              <a href="https://qrco.de/bcT5EW" class="flex justify-center p-4">
+                <button
+                  class="
+                    bg-green-500
+                    hover:bg-green-700
+                    text-white
+                    font-bold
+                    py-2
+                    px-4
+                    rounded
+                    content-center
+                  "
+                >
+                  Curriculum Vitae
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-	<article>
-		<div class="flex flex-wrap overflow-hidden justify-center md:gap-32 md:p-32 lg:gap-64 m-1 lg:p-64">
-			<div id='blitty' class="overflow-hidden w-fit shadow-card border-round">
-				<div class="max-w-sm rounded overflow-hidden shadow-lg white">
-					<img class="w-full" src="blitty_icono.jpg"
-						alt="Blitty logo">
-					<div class="px-6 py-4">
-						<div class="font-bold text-xl mb-2">David García</div>
-						<div class="text-l m-0"><i>Blitty</i></div>
-						<p class="text-gray-700 text-base">
-							Estudiante de la <u>ETSISI</u> en la carrera <b>Ingeniería del Software</b> y apasionado por la <b>Innovación</b>,
-							la <b>Inteligencia Artificial</b> y <b>Seguridad</b>. Interesado en proyectos relacionados con las <u>nuevas tecnologías</u> y
-							en los que se aprende a la vez que se desarrolla.
-						</p>
-						<br>
-						<img class="w-4/6 m-auto" src="blitty_qr.png" alt="Blitty CV">
-						<div class="w-fit m-auto">
-							<br>
-							<a href="https://qrco.de/bcTepM">
-								<button
-									class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded content-center">
-									Curriculum Vitae
-								</button></a>
-							<br>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id='merk' class="overflow-hidden w-fit shadow-card border-round h-100">
-				<div class="max-w-sm rounded overflow-hidden shadow-lg white">
-					<img class="w-full" src="merk_icono.jpg" alt="Marcos">
-					<div class="px-6 py-4">
-						<div class="font-bold text-xl mb-2">Marcos González</div>
-						<div class="text-l m-0"><i>Merk</i></div>
-						<p class="text-gray-700 text-base">
-							Estudiante de <b>Ingeniería de Software</b> en la <u>ETSISI</u> y apasionado por la <b>Ciberseguridad</b>.
-							Motivado
-							para aprender nuevas tecnologías y muy interesado en la <u>Ingeniería Inversa</u> y el
-							<u>Desarrollo de Malware y Exploits</u>.
-						</p>
-						<br>
-						<img class="w-4/6 m-auto" src="qr_merk.png" alt="Marcos CV">
-						<div class="w-fit m-auto">
-							<br>
-							<a href="https://qrco.de/bcT5EW">
-								<button
-									class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded content-center">
-									Curriculum Vitae
-								</button></a>
-							<br>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</article>
-
-	<footer class="text-center text-2xl">Made with ❤️ by Blitty and Merk</footer>
-</body>
-
+    <footer class="text-center text-md">Made with ❤️ by Blitty and Merk</footer>
+  </body>
 </html>
