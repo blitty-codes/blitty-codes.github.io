@@ -50,7 +50,7 @@ const App = {
 				<p>🇪🇸 Español - Nativo</p>
 				<p>🇬🇧 Ingles - Fluido</p>
 				<p>🇩🇪 Aleman - Iniciado</p>
-				<p>Esperanto - Iniciado</p>
+				<p>🇫🇷 Frances - Iniciado</p>
 			`,
 		}
 		const en = {
@@ -103,7 +103,7 @@ const App = {
 					<p>🇪🇸 Spanish - Native</p>
 					<p>🇬🇧 English - Fluent</p>
 					<p>🇩🇪 German - Iniciate</p>
-					<p>Esperanto - Iniciate</p>
+					<p>🇫🇷 Frances - Iniciate</p>
 				`,
 		}
 		const idiom = Vue.reactive({
